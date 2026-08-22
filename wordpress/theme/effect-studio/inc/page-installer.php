@@ -15,6 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * نسخه المنتور که قالب‌ها با آن تولید شده‌اند.
+ * اگر المنتور فعال باشد، نسخه واقعی جایگزین می‌شود.
+ */
+if ( ! defined( 'EFFECT_STUDIO_ELEMENTOR_VERSION' ) ) {
+	define( 'EFFECT_STUDIO_ELEMENTOR_VERSION', '3.20.0' );
+}
+
+/**
  * اجرای نصب صفحات (یک‌بار).
  */
 function effect_studio_install_pages() {
@@ -64,8 +72,10 @@ function effect_studio_install_pages() {
 				// ذخیره محتوای المنتور (فقط بدنه؛ هدر/فوتر توسط قالب رندر می‌شود).
 				update_post_meta( $post_id, '_elementor_edit_mode', 'builder' );
 				update_post_meta( $post_id, '_elementor_template_type', 'wp-page' );
-				update_post_meta( $post_id, '_elementor_version', '3.20.0' );
+				update_post_meta( $post_id, '_elementor_version', EFFECT_STUDIO_ELEMENTOR_VERSION );
 				update_post_meta( $post_id, '_elementor_page_settings', '[]' );
+				// حذف CSS کهنه تا المنتور آن را از نو تولید کند.
+				delete_post_meta( $post_id, '_elementor_css' );
 				if ( ! empty( $tpl['content'] ) ) {
 					update_post_meta( $post_id, '_elementor_data', wp_slash( wp_json_encode( $tpl['content'] ) ) );
 				}
@@ -106,8 +116,37 @@ function effect_studio_install_pages() {
 
 	update_option( 'effect_studio_pages_installed', 1 );
 	flush_rewrite_rules();
+
+	// پاک‌سازی کش CSS المنتور تا صفحات از نو ساخته شوند.
+	effect_studio_clear_elementor_cache();
 }
 add_action( 'after_switch_theme', 'effect_studio_install_pages' );
+
+/**
+ * پاک‌سازی کش CSS المنتور (برای اینکه صفحات تازه‌ساخته شده به‌درستی رندر شوند).
+ */
+function effect_studio_clear_elementor_cache() {
+	// اگر المنتور فعال نیست، کاری نمی‌کنیم (بعداً هنگام فعال‌شدن خودش CSS می‌سازد).
+	if ( ! class_exists( '\Elementor\Plugin' ) ) {
+		return;
+	}
+
+	// حذف فایل‌های CSS مربوط به صفحات قالب (تا از نو تولید شوند).
+	$pages = get_pages( array( 'number' => -1 ) );
+	foreach ( $pages as $page ) {
+		if ( get_post_meta( $page->ID, '_elementor_edit_mode', true ) === 'builder' ) {
+			$css = \Elementor\Core\Files\CSS\Post::create( $page->ID );
+			if ( method_exists( $css, 'delete' ) ) {
+				$css->delete();
+			}
+		}
+	}
+
+	// پاک‌سازی کش عمومی فایل‌های المنتور.
+	if ( method_exists( \Elementor\Plugin::$instance, 'files_manager' ) && is_callable( array( \Elementor\Plugin::$instance->files_manager, 'clear_cache' ) ) ) {
+		\Elementor\Plugin::$instance->files_manager->clear_cache();
+	}
+}
 
 /**
  * ساخت منوی اصلی از آیتم‌های مشخص‌شده.
