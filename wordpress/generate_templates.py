@@ -9,7 +9,7 @@
 
 اجرا: python3 generate_templates.py
 """
-import json, hashlib, os, zipfile, re
+import json, hashlib, os, zipfile, re, base64
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
@@ -88,6 +88,38 @@ def button(text_, url, seed, bg=C["amber"], color=C["ink"], size=16, rd=12, weig
 def spacer(h, seed):
     return w("spacer", {"space": {"unit": "px", "size": h, "sizes": []}}, seed)
 
+# ---------- تصاویر واقعی (استخراج‌شده از فایل‌های HTML اصلی) ----------
+IMG_DIR = os.path.join(BASE, "assets", "images")
+_IMG_CACHE = {}
+
+
+def _img_uri(name):
+    """خواندن تصویر و برگرداندن data URI (با کش)."""
+    if name in _IMG_CACHE:
+        return _IMG_CACHE[name]
+    for ext in ("png", "webp", "jpeg", "jpg"):
+        p = os.path.join(IMG_DIR, "%s.%s" % (name, ext))
+        if os.path.exists(p):
+            data = base64.b64encode(open(p, "rb").read()).decode("ascii")
+            mime = {"png": "image/png", "webp": "image/webp", "jpeg": "image/jpeg", "jpg": "image/jpeg"}[ext]
+            uri = "data:%s;base64,%s" % (mime, data)
+            _IMG_CACHE[name] = uri
+            return uri
+    return None
+
+
+def image(name, seed, alt="", align="center", max_w=None, radius_px=0):
+    """ویجت تصویر با data URI (برای نمایش بدون نیاز به آپلود جداگانه)."""
+    uri = _img_uri(name)
+    if not uri:
+        return spacer(0, seed)
+    s = {"image": {"url": uri, "id": "", "size": "full", "alt": alt}, "align": align}
+    if max_w:
+        s["width"] = {"unit": "px", "size": max_w, "sizes": []}
+    if radius_px:
+        s["image_border_radius"] = radius(radius_px)
+    return w("image", s, seed)
+
 def section(bg=None, elements=None, seed="s", pt=60, pb=60, px=20, gap=20):
     s = {"padding": {"unit": "px", "top": str(pt), "right": str(px), "bottom": str(pb),
                      "left": str(px), "isLinked": False}, "gap": {"unit": "px", "size": gap, "sizes": []}}
@@ -130,6 +162,7 @@ BODIES["home"] = [
     section(seed="p2", elements=[
         heading("خدمات آژانس دیجیتال اثر", "p2-h", color=C["ink"]),
         text("طراحی سایت و اپلیکیشن، هویت بصری، سوشال مدیا، مارکتینگ، سئو و تبلیغات — راهکارهای اختصاصی برای هر کسب‌وکار.", "p2-t"),
+        image("service-identity", "p2-img", alt="هویت بصری", max_w=360, radius_px=16),
         row([([heading("طراحی سایت و اپلیکیشن", "p2-1", size=18, color=C["ink"], tag="h3")], 33),
              ([heading("هویت بصری", "p2-2", size=18, color=C["ink"], tag="h3")], 33),
              ([heading("سوشال مدیا", "p2-3", size=18, color=C["ink"], tag="h3")], 33)], "p2-r1"),
@@ -160,9 +193,11 @@ BODIES["about-us"] = [
     section(seed="a2", elements=[
         heading("تیم حرفه‌ای و خلاق افکت", "a2-h", color=C["ink"]),
         text("استودیو اثر با تیمی متخصص در طراحی، برنامه‌نویسی و بازاریابی دیجیتال، به کسب‌وکارها کمک می‌کند تا برند خود را بسازند و رشد کنند.", "a2-t"),
+        image("team-reza", "a2-img", alt="رضا قائمی", max_w=320, radius_px=16),
     ]),
     section(bg=C["mist"], seed="a3", elements=[
         heading("مفتخر به همکاری با بیش از ۱۰۰ استارتاپ و بیزنس‌های موفق", "a3-h", color=C["ink"], size=32),
+        image("about-map", "a3-img", alt="موقعیت استودیو اثر روی نقشه", max_w=640, radius_px=16),
     ]),
     section(seed="a4", elements=[
         heading("پرسش‌های پرتکرار", "a4-h", color=C["ink"]),
@@ -182,11 +217,13 @@ BODIES["academy"] = [
     ]),
     section(bg=C["mist"], seed="c3", elements=[
         heading("دوره جامع Cinema 4D", "c3-h", color=C["ink"], size=26, tag="h3"),
+        image("course-cinema4d", "c3-img", alt="دوره جامع Cinema 4D", max_w=420, radius_px=16),
         text("آموزش جامع نرم‌افزار سینما فوردی برای طراحی سه‌بعدی و موشن گرافیک.", "c3-t"),
         button("مشاهده دوره", SLUG["course"], "c3-b", bg=C["amber"], color=C["ink"]),
     ]),
     section(seed="c4", elements=[
         heading("دوره جامع فتوشاپ", "c4-h", color=C["ink"], size=26, tag="h3"),
+        image("course-photoshop", "c4-img", alt="دوره جامع فتوشاپ", max_w=420, radius_px=16),
         text("آموزش کامل فتوشاپ از مقدماتی تا پیشرفته برای طراحان.", "c4-t"),
         button("مشاهده دوره", SLUG["course"], "c4-b", bg=C["amber"], color=C["ink"]),
     ]),
@@ -243,7 +280,7 @@ BODIES["shop"] = [
     hero("محصولات با تخفیف استثنایی", "دوره‌های آموزشی، محصولات دیجیتال و پکیج‌های استودیو اثر.", "مشاهده محصولات", SLUG["shop"] + "#products", "s1"),
     section(seed="s2", elements=[
         heading("محصولات", "s2-h", color=C["ink"]),
-        row([([heading("پگ بورد رو میزی", "s2-1", size=18, color=C["ink"], tag="h3"), text("قیمت: ۲,۴۹۸,۰۰۰ تومان", "s2-1p", size=14), button("مشاهده", SLUG["product"], "s2-1b", bg=C["amber"], color=C["ink"])], 33),
+        row([([heading("پگ بورد رو میزی", "s2-1", size=18, color=C["ink"], tag="h3"), image("product-pegboard", "s2-1i", alt="پگ بورد رو میزی", radius_px=12), text("قیمت: ۲,۴۹۸,۰۰۰ تومان", "s2-1p", size=14), button("مشاهده", SLUG["product"], "s2-1b", bg=C["amber"], color=C["ink"])], 33),
              ([heading("پگ بورد رو میزی", "s2-2", size=18, color=C["ink"], tag="h3"), text("قیمت: ۲,۴۹۸,۰۰۰ تومان", "s2-2p", size=14), button("مشاهده", SLUG["product"], "s2-2b", bg=C["amber"], color=C["ink"])], 33),
              ([heading("پگ بورد رو میزی", "s2-3", size=18, color=C["ink"], tag="h3"), text("قیمت: ۲,۴۹۸,۰۰۰ تومان", "s2-3p", size=14), button("مشاهده", SLUG["product"], "s2-3b", bg=C["amber"], color=C["ink"])], 33)], "s2-r"),
     ]),
@@ -257,6 +294,7 @@ BODIES["product"] = [
     hero("پگ بورد رو میزی", "ابزار منظم‌سازی میز کار با طراحی مدرن.", "افزودن به سبد", SLUG["product"], "r1"),
     section(seed="r2", elements=[
         heading("توضیحات محصول", "r2-h", color=C["ink"]),
+        image("product-pegboard", "r2-img", alt="پگ بورد رو میزی", max_w=520, radius_px=16),
         text("پگ بورد رو میزی استودیو اثر برای سازمان‌دهی ابزار و لوازم روی میز کار طراحی شده است.", "r2-t"),
         text("قیمت: ۲,۴۹۸,۰۰۰ تومان", "r2-p", size=18, color=C["royal"], weight="700"),
     ]),
@@ -272,6 +310,7 @@ BODIES["course"] = [
     hero("دوره جامع فتوشاپ", "آموزش کامل فتوشاپ از مقدماتی تا پیشرفته.", "ثبت‌نام در دوره", SLUG["course"] + "#curriculum", "d1"),
     section(seed="d2", elements=[
         heading("توضیحات دوره", "d2-h", color=C["ink"]),
+        image("course-photoshop-intro", "d2-img", alt="معرفی دوره جامع فتوشاپ", max_w=560, radius_px=16),
         text("در این دوره، اصول و تکنیک‌های طراحی گرافیک در فتوشاپ را از پایه یاد می‌گیرید.", "d2-t"),
     ]),
     section(bg=C["mist"], seed="d3", elements=[
@@ -280,6 +319,7 @@ BODIES["course"] = [
     ]),
     section(seed="d4", elements=[
         heading("گواهینامه پایان دوره آکادمی اثر", "d4-h", color=C["ink"], size=28),
+        image("course-certificate", "d4-img", alt="گواهینامه پایان دوره آکادمی اثر", max_w=420, radius_px=16),
         text("پس از پایان دوره، گواهینامه معتبر آکادمی اثر دریافت می‌کنید.", "d4-t"),
     ]),
     section(seed="d5", elements=[

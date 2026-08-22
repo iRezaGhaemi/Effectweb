@@ -10,6 +10,83 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * نمایش محتوای صفحه با پشتیبانی از المنتور + جایگزین ساده.
+ *
+ * - اگر المنتور فعال باشد، محتوای المنتور رندر می‌شود.
+ * - اگر المنتور فعال نباشد، یک نسخه متنی ساده (استخراج‌شده از داده المنتور)
+ *   به‌همراه اعلان نمایش داده می‌شود تا صفحه خالی نماند.
+ */
+function effect_studio_the_page_content() {
+	if ( did_action( 'elementor/loaded' ) && class_exists( '\Elementor\Plugin' ) && \Elementor\Plugin::$instance->documents->get( get_the_ID() )->is_built_with_elementor() ) {
+		the_content();
+		return;
+	}
+
+	// المنتور فعال نیست؛ نمایش جایگزین ساده.
+	echo '<div class="effect-fallback">';
+
+	echo '<h1 class="page-title">' . esc_html( get_the_title() ) . '</h1>';
+
+	// استخراج متن‌ها از داده المنتور برای نمایش یک نسخه خوانا.
+	$data = get_post_meta( get_the_ID(), '_elementor_data', true );
+	if ( $data ) {
+		$decoded = json_decode( $data, true );
+		$texts   = effect_studio_extract_texts( $decoded );
+		if ( ! empty( $texts ) ) {
+			foreach ( $texts as $t ) {
+				echo '<p>' . esc_html( $t ) . '</p>';
+			}
+		}
+	} else {
+		the_content();
+	}
+
+	echo '<div class="effect-fallback__notice">';
+	echo '<p><strong>' . esc_html__( 'برای نمایش کامل طراحی، افزونه المنتور را نصب و فعال کنید.', 'effect-studio' ) . '</strong></p>';
+	echo '<p>' . esc_html__( 'پس از فعال‌سازی المنتور، این صفحه به‌صورت خودکار با طراحی کامل نمایش داده می‌شود.', 'effect-studio' ) . '</p>';
+	echo '</div>';
+
+	echo '</div>';
+}
+
+/**
+ * استخراج متن‌های خوانا از ساختار داده المنتور (برای جایگزین ساده).
+ *
+ * @param array $elements آرایه عناصر المنتور.
+ * @return array آرایه رشته‌های متنی.
+ */
+function effect_studio_extract_texts( $elements ) {
+	$texts = array();
+	if ( ! is_array( $elements ) ) {
+		return $texts;
+	}
+	foreach ( $elements as $el ) {
+		if ( ! is_array( $el ) ) {
+			continue;
+		}
+		$settings = isset( $el['settings'] ) && is_array( $el['settings'] ) ? $el['settings'] : array();
+
+		if ( isset( $settings['title'] ) && is_string( $settings['title'] ) && trim( $settings['title'] ) !== '' ) {
+			$texts[] = $settings['title'];
+		}
+		if ( isset( $settings['editor'] ) && is_string( $settings['editor'] ) ) {
+			$plain = trim( wp_strip_all_tags( $settings['editor'] ) );
+			if ( $plain !== '' ) {
+				$texts[] = $plain;
+			}
+		}
+		if ( isset( $settings['text'] ) && is_string( $settings['text'] ) && trim( $settings['text'] ) !== '' ) {
+			$texts[] = $settings['text'];
+		}
+
+		if ( ! empty( $el['elements'] ) && is_array( $el['elements'] ) ) {
+			$texts = array_merge( $texts, effect_studio_extract_texts( $el['elements'] ) );
+		}
+	}
+	return $texts;
+}
+
+/**
  * منوی پیش‌فرض اصلی (وقتی منویی در پیشخوان تنظیم نشده باشد).
  */
 function effect_studio_primary_menu_fallback() {
