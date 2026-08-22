@@ -7,6 +7,18 @@
 ```
 wordpress/
 ├── README-fa.md                 ← همین راهنما
+├── theme/                       ← قالب وردپرس (Theme) «Effect Studio»
+│   └── effect-studio/           ← این پوشه را در wp-content/themes آپلود کنید
+│       ├── style.css            ← استایل اصلی + تعریف قالب
+│       ├── functions.php        ← تنظیمات، منوها، فونت، رنگ
+│       ├── header.php           ← هدر اختصاصی (مطابق طراحی برند)
+│       ├── footer.php           ← فوتر اختصاصی
+│       ├── front-page.php       ← صفحه نخست (سازگار با المنتور)
+│       ├── page.php / single.php / archive.php / index.php / search.php / 404.php
+│       ├── rtl.css              ← استایل راست‌چین
+│       ├── inc/                 ← customizer (رنگ/تلفن/ایمیل) + توابع کمکی
+│       ├── template-parts/      ← اجزای حلقه محتوا
+│       └── assets/              ← CSS، JS و محل فونت وزیرمتن
 ├── elementor-templates/         ← ۹ قالب قابل-ایمپورت المنتور (JSON)
 │   ├── effect-studio-home.json          (صفحه اصلی)
 │   ├── effect-studio-about-us.json      (درباره ما)
@@ -17,6 +29,7 @@ wordpress/
 │   ├── effect-studio-post.json          (نوشته بلاگ)
 │   ├── effect-studio-shop.json          (فروشگاه)
 │   └── effect-studio-product.json       (صفحه محصول)
+├── generate_templates.py        ← اسکریپت تولید قالب‌های المنتور (قابل استفاده مجدد)
 └── assets/
     ├── logo.png                ← لوگوی برند (PNG)
     ├── logo.webp               ← لوگوی برند (WebP)
@@ -34,14 +47,23 @@ wordpress/
 3. ساختار پیوند یکتا را روی «نام نوشته» بگذارید:
    - **Settings → Permalinks → Post name** و ذخیره کنید.
 
-## 🎨 گام ۲ — نصب قالب و افزونه المنتور
+## 🎨 گام ۲ — نصب قالب وردپرس «Effect Studio» و المنتور
+
+### ۲.۱ نصب قالب اختصاصی (پیشنهادی)
+
+قالب `effect-studio` که در همین پکیج است، هدر و فوتر را **دقیقاً مطابق طراحی سایت** پیاده می‌کند و نیازی به Elementor Pro برای هدر/فوتر ندارید:
+
+1. پوشه `wordpress/theme/effect-studio/` را در مسیر `wp-content/themes/` هاست آپلود کنید (یا فایل zip بسازید و از **Appearance → Themes → Add New → Upload Theme** نصب کنید).
+2. از **Appearance → Themes** قالب **Effect Studio** را فعال کنید.
+3. از **Appearance → Customize** رنگ‌های برند، شماره تلفن و ایمیل را تنظیم کنید.
+4. از **Appearance → Menus** یک منو بسازید و به موقعیت «منوی اصلی» اختصاص دهید (تا قبل از آن، منوی پیش‌فرض برند به‌صورت خودکار نمایش داده می‌شود).
+
+> 💡 اگر نمی‌خواهید از قالب اختصاصی استفاده کنید، می‌توانید قالب سبک **Hello Elementor** نصب کنید؛ اما در آن صورت هدر/فوتر را باید خودتان بسازید (یا با Elementor Pro Theme Builder).
+
+### ۲.۲ نصب المنتور
 
 1. المنتور (نسخه رایگان کافی است) را نصب و فعال کنید:
    - **Plugins → Add New → جستجوی "Elementor" → Install → Activate**
-2. یک قالب ساده و سبک نصب کنید (پیشنهاد: **Hello Elementor** یا **Astra**):
-   - **Appearance → Themes → Add New → Hello Elementor**
-3. قالب «سلام المنتور» را به‌عنوان قالب فعال انتخاب کنید.
-4. (اختیاری) برای هدر/فوتر سراسری، **Elementor Pro → Theme Builder** لازم است؛ اما قالب‌های این پکیج هدر و فوتر را داخل خود صفحه دارند و بدون پرو هم کار می‌کنند.
 
 ## 🌐 گام ۳ — فعال‌سازی راست‌چین (RTL) و فونت فارسی
 
@@ -57,6 +79,10 @@ wordpress/
 2. هر ۹ فایل JSON را یک‌جا انتخاب و ایمپورت کنید.
 3. یک «صفحه» جدید بسازید (Pages → Add New)، سپس **Edit with Elementor** را بزنید.
 4. در المنتور: آیکون پوشه (Add Template) → تب **My Templates** → قالب موردنظر را انتخاب و Insert کنید.
+
+> ⚠️ نکته: قالب‌های المنتور شامل هدر و فوتر هستند؛ چون قالب `effect-studio` هم هدر/فوتر خودش را دارد، برای اینکه هدر/فوتر تکراری نشود، دو راه دارید:
+> - (ساده‌تر) در قالب‌های المنتور، بخش هدر و فوتر (دو کانتینر اول و آخر) را حذف کنید تا فقط هدر/فوتر قالب نمایش داده شود؛ **یا**
+> - هدر/فوتر قالب وردپرس را با Elementor Pro Theme Builder بسازید و بدنه صفحات را از قالب‌های المنتور بگیرید.
 
 ## 🔗 گام ۵ — اتصال صفحات (لینک‌ها)
 

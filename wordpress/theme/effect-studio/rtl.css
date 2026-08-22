@@ -1,0 +1,42 @@
+/**
+ * استایل‌های راست‌چین.
+ * وردپرس این فایل را به‌صورت خودکار وقتی زبان سایت فارسی است بارگذاری می‌کند.
+ * بیشتر استایل‌ها از ابتدا RTL هستند؛ این فایل برای سازگاری‌های تکمیلی است.
+ *
+ * @package Effect_Studio
+ */
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+.entry-meta,
+.entry-summary,
+.page-content {
+	text-align: right;
+}
+
+/* فرم جستجو */
+.search-form {
+	display: flex;
+	gap: 8px;
+}
+.search-form .search-field {
+	flex: 1;
+	height: 44px;
+	padding: 0 16px;
+	border: 1px solid var(--color-line);
+	border-radius: 12px;
+	font-family: inherit;
+}
+.search-form .search-submit {
+	height: 44px;
+	padding: 0 20px;
+	border: 0;
+	border-radius: 12px;
+	background: var(--color-royal);
+	color: #fff;
+	cursor: pointer;
+	font-family: inherit;
+}
