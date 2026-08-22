@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import Marquee from '../components/Marquee';
+import WhySection from '../components/WhySection';
+import Testimonials from '../components/Testimonials';
+import Portfolio from '../components/Portfolio';
 import { home, posts } from '../lib/content';
 import { getPage, getPosts, isConfigured } from '../lib/wp';
 
@@ -29,7 +33,6 @@ export default function Home({ data, latestPosts, connected }) {
     <Layout connected={connected}>
       <section className="px-3 pt-3 sm:px-[30px] sm:pt-6">
         <div className="bg-hero relative overflow-hidden rounded-[24px] sm:rounded-[29px]">
-          {/* هیرو */}
           <div className="relative z-10 mx-auto mt-16 max-w-[894px] px-6 text-center sm:mt-[82px]">
             <span className="inline-block rounded-full bg-gradient-to-b from-[#f000ff9e] to-transparent p-px">
               <span className="block rounded-full bg-[#1f01447d] px-7 py-3 text-[15px] leading-6 text-white sm:text-[16px]">
@@ -53,20 +56,19 @@ export default function Home({ data, latestPosts, connected }) {
             </div>
           </div>
 
-          {/* آمار + لوگوی مشتریان */}
           <div className="relative z-10 mt-16 pb-9 sm:mt-[82px] sm:pb-[47px]">
             <p className="px-6 text-center text-[15px] leading-8 text-white/90 sm:text-[18px]">
               {d.stats || 'مفتخر به همکاری با بیش از 100 استارتاپ و بیزنس های موفق'}
             </p>
-            <div className="fade-x marquee-wrap scrollbar-hide mt-5 overflow-x-auto lg:mx-[92px]" dir="ltr">
+            <Marquee className="mt-5 lg:mx-[92px]">
               <div className="animate-marquee flex h-[94px] w-max items-center gap-8">
-                {[0, 1, 2, 3, 4, 5].map((i) => (
+                {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
                   <span key={i} className="animate-twinkle flex h-[94px] w-[143px] shrink-0 items-center justify-center">
                     <img src="/images/client-logo.webp" alt="" className="max-h-full max-w-full object-contain" loading="lazy" />
                   </span>
                 ))}
               </div>
-            </div>
+            </Marquee>
           </div>
         </div>
       </section>
@@ -89,10 +91,7 @@ export default function Home({ data, latestPosts, connected }) {
 
         <div className="mx-auto mt-10 grid max-w-[1280px] grid-cols-1 gap-6 px-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((name) => (
-            <article
-              key={name}
-              className="group flex h-full flex-col gap-[18px] rounded-[20px] border border-line bg-panel p-3 transition-shadow hover:shadow-xl hover:shadow-royal/5"
-            >
+            <article key={name} className="group flex h-full flex-col gap-[18px] rounded-[20px] border border-line bg-panel p-3 transition-shadow hover:shadow-xl hover:shadow-royal/5">
               <div className="flex items-start justify-between gap-4 px-1 pt-1">
                 <div className="text-right">
                   <h3 className="text-[18px] font-bold text-ink">{name}</h3>
@@ -108,28 +107,54 @@ export default function Home({ data, latestPosts, connected }) {
                 {name === 'سئو' && 'با بهینه‌سازی اصولی، جایگاه شما را در نتایج جستجو ارتقا می‌دهیم تا دیده شوید.'}
                 {name === 'تبلیغات' && 'کمپین‌های تبلیغاتی هدفمند با بالاترین بازدهی برای رشد برند شما.'}
               </p>
-              <img
-                src={SERVICE_IMAGES[name] || '/images/client-logo.webp'}
-                alt={name}
-                className="mt-auto block h-[120px] w-full shrink-0 rounded-2xl object-cover"
-                loading="lazy"
-              />
+              <img src={SERVICE_IMAGES[name] || '/images/client-logo.webp'} alt={name} className="mt-auto block h-[120px] w-full shrink-0 rounded-2xl object-cover" loading="lazy" />
             </article>
           ))}
         </div>
       </section>
 
-      {/* چرا اثر + آخرین مقالات */}
-      <section className="bg-dots-light mt-24 py-16">
-        <div className="mx-auto max-w-[1280px] px-6">
-          <h2 className="text-center text-[22px] font-extrabold leading-snug text-ink sm:text-[27px]">چرا اثر را انتخاب کنیم؟</h2>
-          <p className="mx-auto mt-4 max-w-[720px] text-center text-[14px] leading-8 text-body">{home.why}</p>
+      {/* چرا اثر (با انیمیشن why-up/why-down) */}
+      <section className="bg-why bg-grid-faint relative overflow-hidden mt-24">
+        <div className="mx-auto max-w-[1280px] px-6 py-16">
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <h2 className="flex items-center gap-3 text-[24px] font-extrabold leading-snug text-white sm:text-[28px]">
+                چرا اثر را انتخاب کنیم؟
+              </h2>
+              <p className="mt-2 text-[15px] text-panel/80">Why Choosing Us</p>
+            </div>
+            <a href="#contact" className="flex h-10 items-center gap-2.5 rounded-xl bg-amber px-5 text-[13px] text-[#040406] transition-colors hover:bg-amber-dark">
+              مشاوره رایگان
+            </a>
+          </div>
+          <p className="mt-4 max-w-[760px] text-[12px] leading-6 text-[#d0d0d2] sm:text-[13px]">
+            در این بخش، به متداول‌ترین پرسش‌ها پاسخ داده‌ایم تا همه چیز برای تصمیم‌گیری و شروع همکاری شفاف و روشن باشد. اگر سوال دیگری دارید، با ما در ارتباط باشید!
+          </p>
+          <WhySection />
         </div>
       </section>
 
+      {/* نمونه‌کارها (با animate-pf-scroll) */}
+      <Portfolio />
+
+      {/* نظرات مشتریان (با animate-marquee-slow) */}
+      <Testimonials />
+
+      {/* آخرین مقالات */}
       <section className="mt-24 scroll-mt-8">
         <div className="mx-auto max-w-[1280px] px-6">
-          <h2 className="text-right text-[20px] font-semibold text-ink sm:text-[23px]">آخرین مقالات و ویدئوها</h2>
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <h2 className="flex items-center gap-3 text-[24px] font-extrabold leading-snug text-ink sm:text-[28px]">
+                آخرین مقالات و ویدئو ها
+              </h2>
+              <p className="mt-2 text-[16px] text-muted-2">Latest videos</p>
+            </div>
+            <Link href="/blog" className="group mt-3 flex shrink-0 items-center gap-2 text-[13px] text-royal transition-colors hover:text-royal-2">
+              مشاهده همه
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1" aria-hidden="true"><path d="M19 12H5" /><path d="m11 18-6-6 6-6" /></svg>
+            </Link>
+          </div>
           <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
             {latestPosts.slice(0, 3).map((p) => (
               <Link key={p.slug} href={`/post/${p.slug}`} className="group rounded-[20px] border border-line bg-panel p-3 transition-shadow hover:shadow-xl">
