@@ -1,24 +1,32 @@
 # فونت وزیرمتن (Vazirmatn)
 
-این پوشه برای نگهداری محلی فونت وزیرمتن در نظر گرفته شده است.
+فونت وزیرمتن به‌صورت **محلی** در این پوشه قرار دارد و قالب آن را بدون نیاز به Google Fonts بارگذاری می‌کند.
 
-قالب به‌صورت پیش‌فرض فونت را از Google Fonts بارگذاری می‌کند. برای بارگذاری محلی (پیشنهادی برای سرعت و سازگاری با ایران):
+## فایل‌ها
 
-1. فایل‌های فونت را از این‌جا دانلود کنید:
-   https://github.com/rastikerdar/vazirmatn/releases
+- `Vazirmatn-Variable.woff2` — فونت متغیر (وزن‌های ۱۰۰ تا ۹۰۰ در یک فایل)
+- `Vazirmatn-Regular.woff2` — وزن عادی (۴۰۰)
+- `Vazirmatn-Bold.woff2` — وزن ضخیم (۷۰۰)
 
-2. فایل‌های `woff2` را در همین پوشه (`assets/fonts/`) قرار دهید.
+## لایسنس
 
-3. در `functions.php`، فیلتر `effect_studio_font_url` را به یک `@font-face` محلی تغییر دهید
-   (یا فونت را از طریق افزونه‌های فونت فارسی مدیریت کنید).
+فونت وزیرمتن تحت مجوز [OFL-1.1 (SIL Open Font License)](https://openfontlicense.org) منتشر شده است.
 
-مثال `@font-face`:
+منبع: https://github.com/rastikerdar/vazirmatn
+
+## تعریف @font-face
+
+تعریف فونت در فایل `style.css` قالب انجام شده است:
 
 ```css
 @font-face {
   font-family: "Vazirmatn";
-  src: url("fonts/Vazirmatn-Regular.woff2") format("woff2");
-  font-weight: 400;
+  src: url("fonts/Vazirmatn-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
   font-display: swap;
 }
 ```
+
+> نکته: اگر فونت‌های بیشتری می‌خواهید، آن‌ها را از مخزن رسمی
+> https://github.com/rastikerdar/vazirmatn/releases دانلود کنید.
+

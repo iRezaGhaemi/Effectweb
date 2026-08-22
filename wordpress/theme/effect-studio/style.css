@@ -15,6 +15,31 @@ Tags: rtl-language-support, translation-ready, custom-colors, custom-menu, custo
 */
 
 /* ==========================================================================
+   ۰) فونت محلی وزیرمتن (بدون نیاز به Google Fonts)
+   ========================================================================== */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("assets/fonts/Vazirmatn-Variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("assets/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("assets/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
    ۱) متغیرهای برند
    ========================================================================== */
 :root {

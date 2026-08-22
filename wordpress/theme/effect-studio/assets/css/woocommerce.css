@@ -1,0 +1,219 @@
+/* ============================================================
+   استایل ووکامرس — هماهنگ با برند استودیو اثر
+   ============================================================ */
+
+.wc-effect-wrap {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ---- پیام‌ها و اعلان‌ها ---- */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+  padding: 14px 18px;
+  margin: 0 0 24px;
+  border-radius: 12px;
+  border: 1px solid var(--color-line);
+  background: var(--color-panel);
+  color: var(--color-body);
+  list-style: none;
+}
+.woocommerce-message {
+  border-inline-start: 4px solid #46b450;
+}
+.woocommerce-error {
+  border-inline-start: 4px solid #dc3232;
+}
+
+/* ---- دکمه‌ها ---- */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: var(--color-royal);
+  color: #fff;
+  font-family: inherit;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+  background: var(--color-royal-2);
+  color: #fff;
+}
+.woocommerce a.button.alt,
+.woocommerce button.button.alt {
+  background: var(--color-amber);
+  color: var(--color-ink);
+}
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover {
+  background: var(--color-amber-dark);
+  color: var(--color-ink);
+}
+
+/* ---- شبکه محصولات ---- */
+ul.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  ul.products { grid-template-columns: repeat(3, 1fr); }
+}
+ul.products li.product {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  transition: box-shadow .2s ease;
+}
+ul.products li.product:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+ul.products li.product a img {
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+ul.products li.product .woocommerce-loop-product__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 8px;
+}
+ul.products li.product .price {
+  color: var(--color-royal);
+  font-weight: 700;
+  margin: 0 0 12px;
+  direction: rtl;
+}
+ul.products li.product .button {
+  width: 100%;
+}
+
+/* ---- صفحه محصول ---- */
+.woocommerce div.product .product_title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-ink);
+}
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  color: var(--color-royal);
+  font-size: 22px;
+  font-weight: 700;
+  direction: rtl;
+}
+.woocommerce div.product .woocommerce-product-details__short-description {
+  color: var(--color-body);
+}
+.woocommerce div.product form.cart {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.woocommerce div.product form.cart .quantity .qty {
+  height: 44px;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 0 12px;
+  font-family: inherit;
+}
+
+/* ---- برگه‌ها ---- */
+.woocommerce nav.woocommerce-pagination ul {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+.woocommerce nav.woocommerce-pagination ul li {
+  border: 0;
+}
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--color-mist);
+  color: var(--color-body);
+  font-family: inherit;
+}
+.woocommerce nav.woocommerce-pagination ul li span.current,
+.woocommerce nav.woocommerce-pagination ul li a:hover {
+  background: var(--color-royal);
+  color: #fff;
+}
+
+/* ---- سبد خرید و پرداخت ---- */
+.woocommerce table.shop_table {
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  border-collapse: separate;
+  overflow: hidden;
+  font-family: inherit;
+}
+.woocommerce table.shop_table th {
+  background: var(--color-mist);
+  color: var(--color-ink);
+  padding: 14px;
+  text-align: right;
+}
+.woocommerce table.shop_table td {
+  padding: 14px;
+  border-top: 1px solid var(--color-line);
+}
+.woocommerce .cart_totals,
+.woocommerce-checkout #order_review {
+  background: var(--color-panel);
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  padding: 20px;
+}
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: inherit;
+}
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus {
+  border-color: var(--color-royal);
+  outline: none;
+}
+
+/* ---- ستاره‌ها و امتیاز ---- */
+.woocommerce .star-rating span::before {
+  color: var(--color-amber);
+}
+.woocommerce .woocommerce-product-rating .star-rating {
+  margin-inline-end: 8px;
+}
+
+/* ---- باکس‌های متفرقه ---- */
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale {
+  background: var(--color-amber);
+  color: var(--color-ink);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 10px;
+}

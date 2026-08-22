@@ -1,0 +1,257 @@
+# Copyright (C) 2026 Effect Studio
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Effect Studio 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/iRezaGhaemi/Effectweb\n"
+"POT-Creation-Date: 2026-08-22 00:00+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: footer.php:60
+#: footer.php:60
+msgid "All rights are reserved  |  "
+msgstr ""
+
+#: functions.php:53
+msgid "Amber"
+msgstr ""
+
+#: functions.php:55
+msgid "Body"
+msgstr ""
+
+#: functions.php:54
+msgid "Ink"
+msgstr ""
+
+#: functions.php:51
+msgid "Royal"
+msgstr ""
+
+#: functions.php:52
+msgid "Why"
+msgstr ""
+
+#: template-parts/content-none.php:20
+msgid "آماده انتشار اولین نوشته هستید؟ <a href=\"%s\">از اینجا شروع کنید</a>."
+msgstr ""
+
+#: footer.php:43
+#: footer.php:43
+msgid "آکادمی اثر"
+msgstr ""
+
+#: header.php:42
+#: header.php:42
+msgid "آکادمی هوش مصنوعی"
+msgstr ""
+
+#: footer.php:34
+#: footer.php:49
+#: footer.php:49
+#: inc/template-tags.php:22
+msgid "ارتباط با ما"
+msgstr ""
+
+#: inc/template-tags.php:17
+msgid "استودیو اثر"
+msgstr ""
+
+#: single.php:23
+#: single.php:23
+msgid "انتشار: %s"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "ایمیل"
+msgstr ""
+
+#: inc/template-tags.php:62
+msgid "اینستاگرام"
+msgstr ""
+
+#: 404.php:15
+#: 404.php:15
+msgid "بازگشت به صفحه اصلی"
+msgstr ""
+
+#: inc/template-tags.php:20
+msgid "بلاگ"
+msgstr ""
+
+#: template-parts/content-none.php:29
+#: template-parts/content-none.php:29
+msgid "به نظر می‌رسد چیزی در این مکان پیدا نمی‌شود."
+msgstr ""
+
+#: inc/template-tags.php:63
+msgid "تلگرام"
+msgstr ""
+
+#: footer.php:59
+#: footer.php:59
+msgid "تمام حقوق برای استودیو اثر محفوظ می‌باشد."
+msgstr ""
+
+#: inc/customizer.php:21
+msgid "تنظیمات برند اثر"
+msgstr ""
+
+#: header.php:57
+#: header.php:57
+msgid "ثبت نام | ورود"
+msgstr ""
+
+#: footer.php:13
+#: footer.php:13
+#: inc/template-tags.php:19
+msgid "خدمات اثر"
+msgstr ""
+
+#: inc/template-tags.php:18
+msgid "درباره ما"
+msgstr ""
+
+#: footer.php:28
+#: footer.php:28
+msgid "دسترسی آسان"
+msgstr ""
+
+#: footer.php:44
+#: footer.php:44
+msgid "دوره‌های آموزشی"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "رنگ اصلی برند"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "رنگ تاکیدی (CTA)"
+msgstr ""
+
+#: footer.php:18
+msgid "سوشال مدیا"
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "شماره تلفن"
+msgstr ""
+
+#: footer.php:31
+msgid "صفحه اصلی"
+msgstr ""
+
+#: 404.php:13
+#: 404.php:13
+msgid "صفحه‌ای که دنبال آن هستید پیدا نشد."
+msgstr ""
+
+#: footer.php:16
+msgid "طراحی سایت و اپلیکیشن"
+msgstr ""
+
+#: footer.php:32
+#: inc/template-tags.php:21
+msgid "فروشگاه"
+msgstr ""
+
+#: inc/template-tags.php:66
+msgid "فیسبوک"
+msgstr ""
+
+#: inc/page-installer.php:163
+#: inc/page-installer.php:163
+msgid "قالب استودیو اثر فعال شد و ۹ صفحه سایت به‌صورت خودکار ساخته شدند. برای نمایش کامل محتوا، افزونه المنتور را فعال کنید."
+msgstr ""
+
+#: inc/template-tags.php:65
+msgid "لینکدین"
+msgstr ""
+
+#: footer.php:19
+msgid "مارکتینگ و سئو"
+msgstr ""
+
+#: footer.php:33
+msgid "مقالات"
+msgstr ""
+
+#: footer.php:45
+#: footer.php:45
+msgid "مقالات آموزشی"
+msgstr ""
+
+#: header.php:60
+#: header.php:60
+msgid "منو"
+msgstr ""
+
+#: functions.php:62
+#: header.php:26
+#: header.php:26
+#: inc/page-installer.php:118
+msgid "منوی اصلی"
+msgstr ""
+
+#: functions.php:63
+msgid "منوی فوتر"
+msgstr ""
+
+#: header.php:67
+#: header.php:67
+msgid "منوی موبایل"
+msgstr ""
+
+#: functions.php:149
+msgid "ناحیه فوتر"
+msgstr ""
+
+#: search.php:16
+#: search.php:16
+msgid "نتایج جستجو برای: %s"
+msgstr ""
+
+#: template-parts/content-none.php:26
+#: template-parts/content-none.php:26
+msgid "نتیجه‌ای برای جستجوی شما پیدا نشد. عبارت دیگری را امتحان کنید."
+msgstr ""
+
+#: footer.php:17
+msgid "هویت بصری"
+msgstr ""
+
+#: functions.php:151
+msgid "ویجت‌های ستون‌های فوتر."
+msgstr ""
+
+#: header.php:20
+#: header.php:20
+msgid "پرش به محتوا"
+msgstr ""
+
+#: template-parts/content-none.php:11
+#: template-parts/content-none.php:11
+msgid "چیزی یافت نشد"
+msgstr ""
+
+#: inc/template-tags.php:64
+msgid "یوتیوب"
+msgstr ""
+
+#: 404.php:12
+#: 404.php:12
+msgid "۴۰۴"
+msgstr ""
+
+#: header.php:50
+#: header.php:50
+msgid "۹ صبح تا ۵ عصر"
+msgstr ""

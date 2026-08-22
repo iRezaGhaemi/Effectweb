@@ -64,6 +64,12 @@ function effect_studio_setup() {
 		)
 	);
 
+	// پشتیبانی از ووکامرس.
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+
 	// ترجمه قالب.
 	load_theme_textdomain( 'effect-studio', get_template_directory() . '/languages' );
 }
@@ -83,15 +89,8 @@ add_action( 'after_setup_theme', 'effect_studio_content_width', 0 );
 function effect_studio_scripts() {
 	$dir = get_template_directory_uri();
 
-	// استایل اصلی قالب.
+	// استایل اصلی قالب (فونت وزیرمتن به‌صورت محلی از طریق @font-face بارگذاری می‌شود).
 	wp_enqueue_style( 'effect-studio-style', get_stylesheet_uri(), array(), EFFECT_STUDIO_VERSION );
-
-	// فونت وزیرمتن (با جایگزین محلی در صورت وجود).
-	$font_url = apply_filters(
-		'effect_studio_font_url',
-		'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap'
-	);
-	wp_enqueue_style( 'effect-studio-font', $font_url, array(), null );
 
 	// اسکریپت اصلی (منوی موبایل و ...).
 	wp_enqueue_script( 'effect-studio-main', $dir . '/assets/js/main.js', array(), EFFECT_STUDIO_VERSION, true );
@@ -173,3 +172,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * نصب خودکار صفحات هنگام فعال‌سازی قالب.
  */
 require get_template_directory() . '/inc/page-installer.php';
+
+/**
+ * هماهنگی با ووکامرس (در صورت نصب بودن).
+ */
+require get_template_directory() . '/inc/woocommerce.php';
