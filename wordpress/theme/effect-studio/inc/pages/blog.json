@@ -1,8 +1,9 @@
 {
+  "key": "blog",
+  "slug": "blog",
   "title": "بلاگ",
-  "type": "page",
-  "version": "0.4",
-  "page_settings": [],
+  "menu": "بلاگ",
+  "posts_page": true,
   "content": [
     {
       "id": "edbab455",

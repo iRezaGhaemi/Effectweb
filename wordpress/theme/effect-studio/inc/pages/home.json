@@ -1,8 +1,9 @@
 {
+  "key": "home",
+  "slug": "home",
   "title": "صفحه اصلی",
-  "type": "page",
-  "version": "0.4",
-  "page_settings": [],
+  "menu": "استودیو اثر",
+  "front_page": true,
   "content": [
     {
       "id": "ec6ef230",

@@ -1,8 +1,8 @@
 {
+  "key": "about-us",
+  "slug": "about-us",
   "title": "درباره ما",
-  "type": "page",
-  "version": "0.4",
-  "page_settings": [],
+  "menu": "درباره ما",
   "content": [
     {
       "id": "8a8bb7cd",

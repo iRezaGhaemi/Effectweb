@@ -1,180 +1,9 @@
 {
-  "title": "محصول - استودیو اثر",
+  "title": "پگ بورد رو میزی",
   "type": "page",
   "version": "0.4",
   "page_settings": [],
   "content": [
-    {
-      "id": "763319a6",
-      "elType": "container",
-      "isInner": false,
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#2d0065",
-        "padding": {
-          "unit": "px",
-          "top": "14",
-          "right": "14",
-          "bottom": "14",
-          "left": "14",
-          "isLinked": true
-        },
-        "border_radius": {
-          "unit": "px",
-          "top": "18",
-          "right": "18",
-          "bottom": "18",
-          "left": "18",
-          "isLinked": true
-        }
-      },
-      "elements": [
-        {
-          "id": "4855701b",
-          "elType": "container",
-          "isInner": false,
-          "settings": {
-            "flex_direction": "row",
-            "gap": {
-              "unit": "px",
-              "size": 12,
-              "sizes": []
-            },
-            "align_items": "center"
-          },
-          "elements": [
-            {
-              "id": "9865e2c9",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 20,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "7a5d21c7",
-                  "elType": "widget",
-                  "widgetType": "image",
-                  "isInner": false,
-                  "settings": {
-                    "image": {
-                      "url": "LOGO_URL",
-                      "id": "",
-                      "size": "full",
-                      "alt": "استودیو اثر"
-                    },
-                    "width": {
-                      "unit": "px",
-                      "size": 130,
-                      "sizes": []
-                    },
-                    "align": "right"
-                  },
-                  "elements": []
-                }
-              ]
-            },
-            {
-              "id": "71624442",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 60,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "49b0bde6",
-                  "elType": "widget",
-                  "widgetType": "text-editor",
-                  "isInner": false,
-                  "settings": {
-                    "editor": "<div dir=\"rtl\" style=\"display:flex;flex-wrap:wrap;align-items:center;\"><a href=\"/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">استودیو اثر</a> <a href=\"/about-us/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">درباره ما</a> <a href=\"/#services\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">خدمات اثر</a> <a href=\"/blog/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">بلاگ</a> <a href=\"/shop/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">فروشگاه</a> <a href=\"/#contact\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">ارتباط با ما</a></div>",
-                    "align": "right",
-                    "text_color": "#ffffff",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 15,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "400",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.8,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                }
-              ]
-            },
-            {
-              "id": "a3457c96",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 20,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "6bf15e0c",
-                  "elType": "widget",
-                  "widgetType": "button",
-                  "isInner": false,
-                  "settings": {
-                    "text": "آکادمی هوش مصنوعی",
-                    "align": "right",
-                    "link": {
-                      "url": "/academy/",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    },
-                    "background_color": "#FFAA00",
-                    "button_text_color": "#16161d",
-                    "border_radius": {
-                      "unit": "px",
-                      "top": "12",
-                      "right": "12",
-                      "bottom": "12",
-                      "left": "12",
-                      "isLinked": true
-                    },
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 15,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "600",
-                    "button_box_shadow_box_shadow_type": ""
-                  },
-                  "elements": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "7c92cf1e",
       "elType": "container",
@@ -255,7 +84,7 @@
             "text": "افزودن به سبد",
             "align": "right",
             "link": {
-              "url": "/shop/pegboard/",
+              "url": "/pegboard/",
               "is_external": "",
               "nofollow": "",
               "custom_attributes": ""
@@ -276,8 +105,7 @@
               "size": 16,
               "sizes": []
             },
-            "typography_font_weight": "600",
-            "button_box_shadow_box_shadow_type": ""
+            "typography_font_weight": "600"
           },
           "elements": []
         }
@@ -487,7 +315,7 @@
                     "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/shop/pegboard/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
@@ -508,8 +336,7 @@
                       "size": 16,
                       "sizes": []
                     },
-                    "typography_font_weight": "600",
-                    "button_box_shadow_box_shadow_type": ""
+                    "typography_font_weight": "600"
                   },
                   "elements": []
                 }
@@ -563,7 +390,7 @@
                     "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/shop/pegboard/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
@@ -584,8 +411,7 @@
                       "size": 16,
                       "sizes": []
                     },
-                    "typography_font_weight": "600",
-                    "button_box_shadow_box_shadow_type": ""
+                    "typography_font_weight": "600"
                   },
                   "elements": []
                 }
@@ -639,7 +465,7 @@
                     "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/shop/pegboard/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
@@ -660,362 +486,13 @@
                       "size": 16,
                       "sizes": []
                     },
-                    "typography_font_weight": "600",
-                    "button_box_shadow_box_shadow_type": ""
+                    "typography_font_weight": "600"
                   },
                   "elements": []
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "8d3259eb",
-      "elType": "container",
-      "isInner": false,
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#2d0065",
-        "padding": {
-          "unit": "px",
-          "top": "30",
-          "right": "30",
-          "bottom": "30",
-          "left": "30",
-          "isLinked": true
-        }
-      },
-      "elements": [
-        {
-          "id": "dbb216de",
-          "elType": "container",
-          "isInner": false,
-          "settings": {
-            "flex_direction": "row",
-            "gap": {
-              "unit": "px",
-              "size": 16,
-              "sizes": []
-            },
-            "align_items": "flex-start"
-          },
-          "elements": [
-            {
-              "id": "1ce5959b",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 25,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "43c5914e",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "خدمات اثر",
-                    "header_size": "h4",
-                    "align": "right",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 16,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "700",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.3,
-                      "sizes": []
-                    },
-                    "title_color": "#ffffff"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "97946a1a",
-                  "elType": "widget",
-                  "widgetType": "text-editor",
-                  "isInner": false,
-                  "settings": {
-                    "editor": "<a href=\"/#services\" style=\"color:#d0d0d2;\">طراحی سایت و اپلیکیشن</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">هویت بصری</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">سوشال مدیا</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">مارکتینگ و سئو</a>",
-                    "align": "right",
-                    "text_color": "#3d4350",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 14,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "400",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.8,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                }
-              ]
-            },
-            {
-              "id": "64795946",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 25,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "00690f80",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "دسترسی آسان",
-                    "header_size": "h4",
-                    "align": "right",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 16,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "700",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.3,
-                      "sizes": []
-                    },
-                    "title_color": "#ffffff"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "57ce3312",
-                  "elType": "widget",
-                  "widgetType": "text-editor",
-                  "isInner": false,
-                  "settings": {
-                    "editor": "<a href=\"/\" style=\"color:#d0d0d2;\">صفحه اصلی</a><br><a href=\"/shop/\" style=\"color:#d0d0d2;\">فروشگاه</a><br><a href=\"/blog/\" style=\"color:#d0d0d2;\">مقالات</a><br><a href=\"/#contact\" style=\"color:#d0d0d2;\">ارتباط با ما</a>",
-                    "align": "right",
-                    "text_color": "#3d4350",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 14,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "400",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.8,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                }
-              ]
-            },
-            {
-              "id": "f2710fac",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 25,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "4d50f3f9",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "ارتباط با ما",
-                    "header_size": "h4",
-                    "align": "right",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 16,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "700",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.3,
-                      "sizes": []
-                    },
-                    "title_color": "#ffffff"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "b623e6f8",
-                  "elType": "widget",
-                  "widgetType": "text-editor",
-                  "isInner": false,
-                  "settings": {
-                    "editor": "۰۹۱۵ ۳۸۹ ۲۰۸۸<br>hello@effect.studio",
-                    "align": "right",
-                    "text_color": "#ac8ad6",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 15,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "400",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.8,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                }
-              ]
-            },
-            {
-              "id": "c8bb7c45",
-              "elType": "container",
-              "isInner": false,
-              "settings": {
-                "width": {
-                  "unit": "%",
-                  "size": 25,
-                  "sizes": []
-                },
-                "flex_direction": "column",
-                "align_items": "stretch"
-              },
-              "elements": [
-                {
-                  "id": "43b067c0",
-                  "elType": "widget",
-                  "widgetType": "heading",
-                  "isInner": false,
-                  "settings": {
-                    "title": "آکادمی اثر",
-                    "header_size": "h4",
-                    "align": "right",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 16,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "700",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.3,
-                      "sizes": []
-                    },
-                    "title_color": "#ffffff"
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "aff54403",
-                  "elType": "widget",
-                  "widgetType": "text-editor",
-                  "isInner": false,
-                  "settings": {
-                    "editor": "<a href=\"/academy/\" style=\"color:#d0d0d2;\">دوره‌های آموزشی</a><br><a href=\"/blog/\" style=\"color:#d0d0d2;\">مقالات آموزشی</a>",
-                    "align": "right",
-                    "text_color": "#3d4350",
-                    "typography_typography": "custom",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 14,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "400",
-                    "typography_line_height": {
-                      "unit": "em",
-                      "size": 1.8,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "62ea80d0",
-          "elType": "widget",
-          "widgetType": "spacer",
-          "isInner": false,
-          "settings": {
-            "space": {
-              "unit": "px",
-              "size": 20,
-              "sizes": []
-            }
-          },
-          "elements": []
-        },
-        {
-          "id": "e1f97cd2",
-          "elType": "widget",
-          "widgetType": "divider",
-          "isInner": false,
-          "settings": {
-            "color": "#430096",
-            "weight": {
-              "unit": "px",
-              "size": 1,
-              "sizes": []
-            }
-          },
-          "elements": []
-        },
-        {
-          "id": "8d6d84b1",
-          "elType": "widget",
-          "widgetType": "text-editor",
-          "isInner": false,
-          "settings": {
-            "editor": "<div dir=\"rtl\" style=\"text-align:center;color:#fff;\">تمام حقوق برای استودیو اثر محفوظ می‌باشد. | Effect Studio 2025</div>",
-            "align": "center",
-            "text_color": "#ffffff",
-            "typography_typography": "custom",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 13,
-              "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1.8,
-              "sizes": []
-            }
-          },
-          "elements": []
         }
       ]
     }

@@ -1,11 +1,10 @@
 {
-  "title": "بلاگ",
-  "type": "page",
-  "version": "0.4",
-  "page_settings": [],
+  "key": "product",
+  "slug": "pegboard",
+  "title": "پگ بورد رو میزی",
   "content": [
     {
-      "id": "edbab455",
+      "id": "7c92cf1e",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -27,12 +26,12 @@
       },
       "elements": [
         {
-          "id": "7abc93de",
+          "id": "fdd825aa",
           "elType": "widget",
           "widgetType": "heading",
           "isInner": false,
           "settings": {
-            "title": "بلاگ استودیو اثر",
+            "title": "پگ بورد رو میزی",
             "header_size": "h1",
             "align": "right",
             "typography_typography": "custom",
@@ -52,12 +51,12 @@
           "elements": []
         },
         {
-          "id": "081531db",
+          "id": "38835f29",
           "elType": "widget",
           "widgetType": "text-editor",
           "isInner": false,
           "settings": {
-            "editor": "آخرین مقالات، ویدئوها و اخبار دنیای تکنولوژی و طراحی.",
+            "editor": "ابزار منظم‌سازی میز کار با طراحی مدرن.",
             "align": "right",
             "text_color": "#ac8ad6",
             "typography_typography": "custom",
@@ -76,15 +75,15 @@
           "elements": []
         },
         {
-          "id": "5b8762d8",
+          "id": "600ef215",
           "elType": "widget",
           "widgetType": "button",
           "isInner": false,
           "settings": {
-            "text": "مشاهده مقالات",
+            "text": "افزودن به سبد",
             "align": "right",
             "link": {
-              "url": "/blog/",
+              "url": "/pegboard/",
               "is_external": "",
               "nofollow": "",
               "custom_attributes": ""
@@ -112,7 +111,7 @@
       ]
     },
     {
-      "id": "fbfba2e4",
+      "id": "d2791864",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -132,12 +131,12 @@
       },
       "elements": [
         {
-          "id": "7ab4a20f",
+          "id": "6cc2a98e",
           "elType": "widget",
           "widgetType": "heading",
           "isInner": false,
           "settings": {
-            "title": "تازه‌های روز",
+            "title": "توضیحات محصول",
             "header_size": "h2",
             "align": "right",
             "typography_typography": "custom",
@@ -157,7 +156,104 @@
           "elements": []
         },
         {
-          "id": "bdf95296",
+          "id": "64cf3ada",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "پگ بورد رو میزی استودیو اثر برای سازمان‌دهی ابزار و لوازم روی میز کار طراحی شده است.",
+            "align": "right",
+            "text_color": "#3d4350",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.8,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "94a4ed4a",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "قیمت: ۲,۴۹۸,۰۰۰ تومان",
+            "align": "right",
+            "text_color": "#4a00a5",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 18,
+              "sizes": []
+            },
+            "typography_font_weight": "700",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.8,
+              "sizes": []
+            }
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "9d3e622d",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "gap": {
+          "unit": "px",
+          "size": 20,
+          "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "#f5f5f5"
+      },
+      "elements": [
+        {
+          "id": "f1b8026b",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "محصولات مرتبط",
+            "header_size": "h2",
+            "align": "right",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 28,
+              "sizes": []
+            },
+            "typography_font_weight": "700",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.3,
+              "sizes": []
+            },
+            "title_color": "#16161d"
+          },
+          "elements": []
+        },
+        {
+          "id": "d807ba4e",
           "elType": "container",
           "isInner": false,
           "settings": {
@@ -171,7 +267,7 @@
           },
           "elements": [
             {
-              "id": "dd18943e",
+              "id": "4e968862",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -185,12 +281,12 @@
               },
               "elements": [
                 {
-                  "id": "a98e62d7",
+                  "id": "83d64723",
                   "elType": "widget",
                   "widgetType": "heading",
                   "isInner": false,
                   "settings": {
-                    "title": "رتبه‌بندی تمام ۸ فیلم تاریخی ساخته ریدلی اسکات؛ از Robin Hood تا Gladiator II",
+                    "title": "پگ بورد رو میزی",
                     "header_size": "h3",
                     "align": "right",
                     "typography_typography": "custom",
@@ -210,21 +306,21 @@
                   "elements": []
                 },
                 {
-                  "id": "9a72017e",
+                  "id": "5ea56933",
                   "elType": "widget",
                   "widgetType": "button",
                   "isInner": false,
                   "settings": {
-                    "text": "مطالعه",
+                    "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/sample-post/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
                     },
-                    "background_color": "#4a00a5",
-                    "button_text_color": "#ffffff",
+                    "background_color": "#FFAA00",
+                    "button_text_color": "#16161d",
                     "border_radius": {
                       "unit": "px",
                       "top": "12",
@@ -246,7 +342,7 @@
               ]
             },
             {
-              "id": "97f00371",
+              "id": "0bb68692",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -260,12 +356,12 @@
               },
               "elements": [
                 {
-                  "id": "cfe276d6",
+                  "id": "3d12264a",
                   "elType": "widget",
                   "widgetType": "heading",
                   "isInner": false,
                   "settings": {
-                    "title": "رونمایی از هیوندای الانترا ۲۰۲۷؛ بزرگ‌تر، لوکس‌تر و مجهز به فناوری‌های نوین",
+                    "title": "پگ بورد رو میزی",
                     "header_size": "h3",
                     "align": "right",
                     "typography_typography": "custom",
@@ -285,21 +381,21 @@
                   "elements": []
                 },
                 {
-                  "id": "4b8ec5c1",
+                  "id": "59aadce6",
                   "elType": "widget",
                   "widgetType": "button",
                   "isInner": false,
                   "settings": {
-                    "text": "مطالعه",
+                    "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/sample-post/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
                     },
-                    "background_color": "#4a00a5",
-                    "button_text_color": "#ffffff",
+                    "background_color": "#FFAA00",
+                    "button_text_color": "#16161d",
                     "border_radius": {
                       "unit": "px",
                       "top": "12",
@@ -321,7 +417,7 @@
               ]
             },
             {
-              "id": "a2428759",
+              "id": "eb2f356d",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -335,12 +431,12 @@
               },
               "elements": [
                 {
-                  "id": "808cbcbe",
+                  "id": "ac3aaf75",
                   "elType": "widget",
                   "widgetType": "heading",
                   "isInner": false,
                   "settings": {
-                    "title": "ای‌ام‌دی از انویدیا جلو می‌زند؛ پیش‌بینی فروش بالاتر EPYC Venice",
+                    "title": "پگ بورد رو میزی",
                     "header_size": "h3",
                     "align": "right",
                     "typography_typography": "custom",
@@ -360,21 +456,21 @@
                   "elements": []
                 },
                 {
-                  "id": "aaba9d71",
+                  "id": "fdc1408f",
                   "elType": "widget",
                   "widgetType": "button",
                   "isInner": false,
                   "settings": {
-                    "text": "مطالعه",
+                    "text": "مشاهده",
                     "align": "right",
                     "link": {
-                      "url": "/sample-post/",
+                      "url": "/pegboard/",
                       "is_external": "",
                       "nofollow": "",
                       "custom_attributes": ""
                     },
-                    "background_color": "#4a00a5",
-                    "button_text_color": "#ffffff",
+                    "background_color": "#FFAA00",
+                    "button_text_color": "#16161d",
                     "border_radius": {
                       "unit": "px",
                       "top": "12",
@@ -396,111 +492,6 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "7a6f150b",
-      "elType": "container",
-      "isInner": false,
-      "settings": {
-        "padding": {
-          "unit": "px",
-          "top": "60",
-          "right": "20",
-          "bottom": "60",
-          "left": "20",
-          "isLinked": false
-        },
-        "gap": {
-          "unit": "px",
-          "size": 20,
-          "sizes": []
-        }
-      },
-      "elements": [
-        {
-          "id": "78490675",
-          "elType": "widget",
-          "widgetType": "heading",
-          "isInner": false,
-          "settings": {
-            "title": "دسته‌بندی‌ها",
-            "header_size": "h2",
-            "align": "right",
-            "typography_typography": "custom",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 40,
-              "sizes": []
-            },
-            "typography_font_weight": "700",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1.3,
-              "sizes": []
-            },
-            "title_color": "#16161d"
-          },
-          "elements": []
-        },
-        {
-          "id": "9817eb25",
-          "elType": "widget",
-          "widgetType": "text-editor",
-          "isInner": false,
-          "settings": {
-            "editor": "تکنولوژی، نقد و بررسی، خودرو، ویدئو، آموزش، علمی، کسب‌وکار",
-            "align": "right",
-            "text_color": "#3d4350",
-            "typography_typography": "custom",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 16,
-              "sizes": []
-            },
-            "typography_font_weight": "400",
-            "typography_line_height": {
-              "unit": "em",
-              "size": 1.8,
-              "sizes": []
-            }
-          },
-          "elements": []
-        },
-        {
-          "id": "787e8d58",
-          "elType": "widget",
-          "widgetType": "button",
-          "isInner": false,
-          "settings": {
-            "text": "همه دسته‌ها",
-            "align": "right",
-            "link": {
-              "url": "/blog-category/",
-              "is_external": "",
-              "nofollow": "",
-              "custom_attributes": ""
-            },
-            "background_color": "#f5f5f5",
-            "button_text_color": "#16161d",
-            "border_radius": {
-              "unit": "px",
-              "top": "12",
-              "right": "12",
-              "bottom": "12",
-              "left": "12",
-              "isLinked": true
-            },
-            "typography_typography": "custom",
-            "typography_font_size": {
-              "unit": "px",
-              "size": 16,
-              "sizes": []
-            },
-            "typography_font_weight": "600"
-          },
-          "elements": []
         }
       ]
     }

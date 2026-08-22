@@ -168,3 +168,8 @@ require get_template_directory() . '/inc/customizer.php';
  * قالب‌های بخش‌ها.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * نصب خودکار صفحات هنگام فعال‌سازی قالب.
+ */
+require get_template_directory() . '/inc/page-installer.php';
