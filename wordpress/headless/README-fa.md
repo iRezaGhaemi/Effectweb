@@ -60,18 +60,24 @@ npm run start
 ### فیلدهای ساختاری (اختیاری با ACF)
 
 برای بخش‌هایی مثل «هیرو»، «خدمات» و «آمار» که ساختاری هستند، افزونه رایگان
-**ACF (Advanced Custom Fields)** را نصب کنید و این فیلدها را بسازید؛ کد ما آن‌ها را
-از کلید `acf` در پاسخ REST می‌خواند:
+**ACF (Advanced Custom Fields)** را نصب کنید.
 
-| صفحه | اسلاگ | فیلدهای پیشنهادی |
+> ✅ ما پلاگین ACF و گروه‌های فیلد آماده را برایتان ساخته‌ایم — در
+> پوشه `../plugins/`:
+> - `advanced-custom-fields.zip` ← پلاگین قابل نصب
+> - `acf-field-groups.json` ← گروه‌های فیلد (ایمپورت از Custom Fields → Tools)
+>
+> کد فرانت‌اند (`lib/wp.js`) این فیلدها را از کلید `acf` در پاسخ REST می‌خواند.
+
+| صفحه | اسلاگ | فیلدهای ACF |
 |---|---|---|
-| خانه | home | hero (text), subtitle (text), services (repeater) |
-| درباره ما | about-us | hero (text), body (textarea) |
-| آکادمی | academy | hero (text), body (textarea), courses (repeater) |
-| دوره | course | hero, body, curriculum (textarea) |
+| خانه | home | hero_title, hero_subtitle, services, stats, why |
+| درباره ما | about-us | hero_text, body |
+| آکادمی | academy | hero_text, body, courses |
+| دوره | course | hero_text, body, curriculum |
 
 > برای اینکه ACF در REST API در دسترس باشد، در تنظیمات گروه فیلد،
-> «Show in REST API» را فعال کنید.
+> «Show in REST API» را فعال کنید (در فایل JSON ما از قبل فعال است).
 
 ## ⚙️ نکات فنی
 

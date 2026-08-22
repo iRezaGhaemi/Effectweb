@@ -23,7 +23,8 @@ async function wpFetch(path, fallback, revalidate = 60) {
 
 /**
  * خواندن یک برگه (Page) بر اساس اسلاگ.
- * فیلدهای ACF (در صورت وجود) روی آبجکت acf برگردانده می‌شوند.
+ * فیلدهای ACF (در صورت وجود) روی آبجکت acf برگردانده می‌شوند و
+ * در ساختار مورد انتظار کامپوننت‌ها نرمال‌سازی می‌شوند.
  */
 export async function getPage(slug, fallback) {
   const data = await wpFetch(
@@ -32,12 +33,24 @@ export async function getPage(slug, fallback) {
   );
   if (Array.isArray(data) && data.length) {
     const p = data[0];
-    return {
-      title: p.title?.rendered || fallback?.title,
-      hero: p.acf?.hero || fallback?.hero,
-      body: p.acf?.body || stripHtml(p.content?.rendered) || fallback?.body,
-      acf: p.acf || {},
-    };
+    const acf = p.acf || {};
+    const out = { ...fallback, title: p.title?.rendered || fallback?.title };
+
+    // صفحه اصلی: hero به‌صورت آبجکت (title/subtitle)
+    if (acf.hero_title) out.hero = { ...(fallback?.hero || {}), title: acf.hero_title };
+    if (acf.hero_subtitle) out.hero = { ...(out.hero || {}), subtitle: acf.hero_subtitle };
+
+    // صفحات ساده: hero به‌صورت رشته متنی
+    if (acf.hero_text) out.hero = acf.hero_text;
+
+    if (acf.body) out.body = acf.body;
+    if (acf.services) out.services = acf.services.map((s) => s.name);
+    if (acf.stats) out.stats = acf.stats;
+    if (acf.why) out.why = acf.why;
+    if (acf.courses) out.courses = acf.courses.map((c) => ({ title: c.title, desc: c.desc }));
+    if (acf.curriculum) out.curriculum = acf.curriculum;
+
+    return out;
   }
   return fallback;
 }
