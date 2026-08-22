@@ -6,37 +6,49 @@ export default function Product({ product, connected }) {
   if (!product) {
     return (
       <Layout connected={connected}>
-        <section className="px-3 pt-3 sm:px-[30px] sm:pt-6">
-          <div className="bg-hero relative overflow-hidden rounded-[24px] sm:rounded-[29px]">
-            <h1 className="relative z-10 mx-auto max-w-[894px] px-6 pt-16 text-center text-[30px] font-black leading-[1.35] text-white sm:text-[38px]">
-              محصول یافت نشد
-            </h1>
-          </div>
-        </section>
+        <main className="flex min-h-screen w-full flex-col gap-16 bg-surface py-6">
+          <h1 className="px-4 text-[30px] font-bold text-ink">محصول یافت نشد</h1>
+        </main>
       </Layout>
     );
   }
   return (
     <Layout connected={connected}>
-      <section className="px-3 pt-3 sm:px-[30px] sm:pt-6">
-        <div className="bg-hero relative overflow-hidden rounded-[24px] sm:rounded-[29px]">
-          <h1 className="relative z-10 mx-auto max-w-[894px] px-6 pt-16 text-center text-[30px] font-black leading-[1.35] text-white sm:text-[38px]">
-            {product.title}
-          </h1>
-          <p className="relative z-10 mx-auto max-w-[894px] px-6 pb-12 pt-4 text-center text-[14px] text-white/85">{product.desc}</p>
-        </div>
-      </section>
+      <main className="flex min-h-screen w-full flex-col gap-16 bg-surface py-6">
+        {/* هیرو محصول */}
+        <section className="px-4 sm:px-[30px]">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="flex flex-col justify-center gap-4">
+              <div className="flex items-center justify-start gap-1.5">
+                <span className="flex h-6 items-center rounded-lg px-1.5 text-[11px] leading-5 bg-royal/10 text-royal">کتاب</span>
+                <span className="flex h-6 items-center rounded-lg px-1.5 text-[11px] leading-5 bg-[#ff7b06]/10 text-[#f95e00]">تخفیف ویژه</span>
+              </div>
+              <h1 className="text-[30px] font-bold leading-[1.6] text-ink">{product.title}</h1>
+              <p className="text-[16px] leading-8 text-body">{product.desc}</p>
+              <div className="flex items-center justify-start gap-1">
+                <span className="text-[24px] font-semibold leading-8 text-royal">{product.price.replace(' تومان', '')}</span>
+                <span className="text-[14px] leading-6 text-muted">تومان</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <button type="button" className="flex h-12 items-center gap-3 rounded-xl bg-amber px-6 text-[15px] font-semibold text-ink transition-colors hover:bg-amber-dark">
+                  افزودن به سبد خرید
+                </button>
+              </div>
+            </div>
+            <div className="relative h-[360px] overflow-hidden rounded-[20px] border border-line bg-white p-3">
+              <img src="/images/prod-2.jpeg" alt={product.title} className="h-full w-full rounded-2xl object-cover" loading="lazy" />
+            </div>
+          </div>
+        </section>
 
-      <section className="mt-10">
-        <div className="mx-auto max-w-[860px] px-6">
-          <img src="/images/product-pegboard.jpeg" alt={product.title} className="block h-auto w-full rounded-[20px] object-cover" loading="lazy" />
-          <p className="mt-6 text-right text-[15px] leading-8 text-body">{product.desc}</p>
-          <p className="mt-4 text-right text-[20px] font-bold text-royal">{product.price}</p>
-          <a href="#" className="mt-6 flex h-12 items-center justify-center rounded-xl bg-amber px-7 text-[15px] font-semibold text-ink-2 transition-colors hover:bg-amber-dark">
-            افزودن به سبد
-          </a>
-        </div>
-      </section>
+        {/* توضیحات */}
+        <section className="px-4 sm:px-[30px]">
+          <div className="rounded-[20px] border border-line bg-white p-6">
+            <h2 className="text-[22px] font-bold leading-8 text-ink">توضیحات محصول</h2>
+            <p className="mt-3 text-[14px] leading-8 text-body">{product.desc}</p>
+          </div>
+        </section>
+      </main>
     </Layout>
   );
 }
