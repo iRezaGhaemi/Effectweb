@@ -1,0 +1,42 @@
+/* ============================================================
+   استودیو اثر — پالت رنگ و تایپوگرافی برند
+   این فایل را می‌توانید در المنتور مسیر:
+   Elementor → Site Settings → Custom CSS
+   یا در Customize → Additional CSS قرار دهید.
+   ============================================================ */
+
+:root {
+  --color-royal: #4a00a5;      /* بنفش اصلی */
+  --color-royal-2: #5e01a4;
+  --color-violet: #6e33b7;
+  --color-lilac: #ac8ad6;
+  --color-why: #2d0065;        /* پس‌زمینه تیره هدر/فوتر */
+  --color-amber: #ffaa00;      /* دکمه‌های CTA */
+  --color-amber-dark: #e89b00;
+  --color-ink: #16161d;        /* رنگ متن اصلی */
+  --color-body: #3d4350;
+  --color-muted: #a3a9b6;
+  --color-line: #e0e2e7;
+  --color-mist: #f5f5f5;
+  --color-panel: #fafafa;
+  --font-sans: "Vazirmatn", "IRANSans", "Ravi", "Segoe UI", Tahoma, sans-serif;
+}
+
+html, body {
+  font-family: var(--font-sans) !important;
+  direction: rtl;
+  text-align: right;
+}
+
+/* لینک‌ها */
+a { text-decoration: none; }
+
+/* عنوان‌ها */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-sans) !important; }
+
+/* دکمه‌های برند (در صورت استفاده) */
+.btn-royal { background: var(--color-royal); color: #fff; }
+.btn-amber { background: var(--color-amber); color: var(--color-ink); }
+
+/* اسکرول نرم */
+html { scroll-behavior: smooth; }

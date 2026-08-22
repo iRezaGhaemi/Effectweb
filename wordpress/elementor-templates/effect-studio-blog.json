@@ -1,0 +1,1032 @@
+{
+  "title": "بلاگ - استودیو اثر",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "cc6a4091",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2d0065",
+        "padding": {
+          "unit": "px",
+          "top": "14",
+          "right": "14",
+          "bottom": "14",
+          "left": "14",
+          "isLinked": true
+        },
+        "border_radius": {
+          "unit": "px",
+          "top": "18",
+          "right": "18",
+          "bottom": "18",
+          "left": "18",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "e006bf79",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "flex_direction": "row",
+            "gap": {
+              "unit": "px",
+              "size": 12,
+              "sizes": []
+            },
+            "align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "470a66ec",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 20,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "b2c9b283",
+                  "elType": "widget",
+                  "widgetType": "image",
+                  "isInner": false,
+                  "settings": {
+                    "image": {
+                      "url": "LOGO_URL",
+                      "id": "",
+                      "size": "full",
+                      "alt": "استودیو اثر"
+                    },
+                    "width": {
+                      "unit": "px",
+                      "size": 130,
+                      "sizes": []
+                    },
+                    "align": "right"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "a68e1b52",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 60,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "d1750e47",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<div dir=\"rtl\" style=\"display:flex;flex-wrap:wrap;align-items:center;\"><a href=\"/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">استودیو اثر</a> <a href=\"/about-us/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">درباره ما</a> <a href=\"/#services\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">خدمات اثر</a> <a href=\"/blog/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">بلاگ</a> <a href=\"/shop/\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">فروشگاه</a> <a href=\"/#contact\" style=\"color:#ac8ad6;text-decoration:none;margin-inline-end:22px;font-size:15px;font-weight:500;\">ارتباط با ما</a></div>",
+                    "align": "right",
+                    "text_color": "#ffffff",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "47372f3a",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 20,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "a5c9bb28",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "آکادمی هوش مصنوعی",
+                    "align": "right",
+                    "link": {
+                      "url": "/academy/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "background_color": "#FFAA00",
+                    "button_text_color": "#16161d",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "button_box_shadow_box_shadow_type": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "edbab455",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "padding": {
+          "unit": "px",
+          "top": "70",
+          "right": "20",
+          "bottom": "70",
+          "left": "20",
+          "isLinked": false
+        },
+        "gap": {
+          "unit": "px",
+          "size": 20,
+          "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "#2d0065"
+      },
+      "elements": [
+        {
+          "id": "7abc93de",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "بلاگ استودیو اثر",
+            "header_size": "h1",
+            "align": "right",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 44,
+              "sizes": []
+            },
+            "typography_font_weight": "800",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.3,
+              "sizes": []
+            },
+            "title_color": "#ffffff"
+          },
+          "elements": []
+        },
+        {
+          "id": "081531db",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "آخرین مقالات، ویدئوها و اخبار دنیای تکنولوژی و طراحی.",
+            "align": "right",
+            "text_color": "#ac8ad6",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 17,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.8,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "5b8762d8",
+          "elType": "widget",
+          "widgetType": "button",
+          "isInner": false,
+          "settings": {
+            "text": "مشاهده مقالات",
+            "align": "right",
+            "link": {
+              "url": "/blog/",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "background_color": "#FFAA00",
+            "button_text_color": "#16161d",
+            "border_radius": {
+              "unit": "px",
+              "top": "12",
+              "right": "12",
+              "bottom": "12",
+              "left": "12",
+              "isLinked": true
+            },
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "typography_font_weight": "600",
+            "button_box_shadow_box_shadow_type": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "fbfba2e4",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "gap": {
+          "unit": "px",
+          "size": 20,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "7ab4a20f",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "تازه‌های روز",
+            "header_size": "h2",
+            "align": "right",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 40,
+              "sizes": []
+            },
+            "typography_font_weight": "700",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.3,
+              "sizes": []
+            },
+            "title_color": "#16161d"
+          },
+          "elements": []
+        },
+        {
+          "id": "bdf95296",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "flex_direction": "row",
+            "gap": {
+              "unit": "px",
+              "size": 20,
+              "sizes": []
+            },
+            "align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "dd18943e",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 33,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "a98e62d7",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "رتبه‌بندی تمام ۸ فیلم تاریخی ساخته ریدلی اسکات؛ از Robin Hood تا Gladiator II",
+                    "header_size": "h3",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#16161d"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "9a72017e",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "مطالعه",
+                    "align": "right",
+                    "link": {
+                      "url": "/blog/hyundai-elantra-2027/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "background_color": "#4a00a5",
+                    "button_text_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "button_box_shadow_box_shadow_type": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "97f00371",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 33,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "cfe276d6",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "رونمایی از هیوندای الانترا ۲۰۲۷؛ بزرگ‌تر، لوکس‌تر و مجهز به فناوری‌های نوین",
+                    "header_size": "h3",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#16161d"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "4b8ec5c1",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "مطالعه",
+                    "align": "right",
+                    "link": {
+                      "url": "/blog/hyundai-elantra-2027/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "background_color": "#4a00a5",
+                    "button_text_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "button_box_shadow_box_shadow_type": ""
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "a2428759",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 33,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "808cbcbe",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "ای‌ام‌دی از انویدیا جلو می‌زند؛ پیش‌بینی فروش بالاتر EPYC Venice",
+                    "header_size": "h3",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#16161d"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "aaba9d71",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "isInner": false,
+                  "settings": {
+                    "text": "مطالعه",
+                    "align": "right",
+                    "link": {
+                      "url": "/blog/hyundai-elantra-2027/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "background_color": "#4a00a5",
+                    "button_text_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12",
+                      "isLinked": true
+                    },
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "button_box_shadow_box_shadow_type": ""
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7a6f150b",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "padding": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "gap": {
+          "unit": "px",
+          "size": 20,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "78490675",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "دسته‌بندی‌ها",
+            "header_size": "h2",
+            "align": "right",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 40,
+              "sizes": []
+            },
+            "typography_font_weight": "700",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.3,
+              "sizes": []
+            },
+            "title_color": "#16161d"
+          },
+          "elements": []
+        },
+        {
+          "id": "9817eb25",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "تکنولوژی، نقد و بررسی، خودرو، ویدئو، آموزش، علمی، کسب‌وکار",
+            "align": "right",
+            "text_color": "#3d4350",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.8,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "787e8d58",
+          "elType": "widget",
+          "widgetType": "button",
+          "isInner": false,
+          "settings": {
+            "text": "همه دسته‌ها",
+            "align": "right",
+            "link": {
+              "url": "/category/technology/",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "background_color": "#f5f5f5",
+            "button_text_color": "#16161d",
+            "border_radius": {
+              "unit": "px",
+              "top": "12",
+              "right": "12",
+              "bottom": "12",
+              "left": "12",
+              "isLinked": true
+            },
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "typography_font_weight": "600",
+            "button_box_shadow_box_shadow_type": ""
+          },
+          "elements": []
+        }
+      ]
+    },
+    {
+      "id": "0cfeb679",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#2d0065",
+        "padding": {
+          "unit": "px",
+          "top": "30",
+          "right": "30",
+          "bottom": "30",
+          "left": "30",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "bb96c215",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "flex_direction": "row",
+            "gap": {
+              "unit": "px",
+              "size": 16,
+              "sizes": []
+            },
+            "align_items": "flex-start"
+          },
+          "elements": [
+            {
+              "id": "68ddeb60",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 25,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "cedb43a4",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "خدمات اثر",
+                    "header_size": "h4",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#ffffff"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "825d2949",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<a href=\"/#services\" style=\"color:#d0d0d2;\">طراحی سایت و اپلیکیشن</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">هویت بصری</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">سوشال مدیا</a><br><a href=\"/#services\" style=\"color:#d0d0d2;\">مارکتینگ و سئو</a>",
+                    "align": "right",
+                    "text_color": "#3d4350",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "a53fe5b2",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 25,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "c32bb6bd",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "دسترسی آسان",
+                    "header_size": "h4",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#ffffff"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "06e7296d",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<a href=\"/\" style=\"color:#d0d0d2;\">صفحه اصلی</a><br><a href=\"/shop/\" style=\"color:#d0d0d2;\">فروشگاه</a><br><a href=\"/blog/\" style=\"color:#d0d0d2;\">مقالات</a><br><a href=\"/#contact\" style=\"color:#d0d0d2;\">ارتباط با ما</a>",
+                    "align": "right",
+                    "text_color": "#3d4350",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "66dc625f",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 25,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "a8b7a18d",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "ارتباط با ما",
+                    "header_size": "h4",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#ffffff"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d22a7533",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "۰۹۱۵ ۳۸۹ ۲۰۸۸<br>hello@effect.studio",
+                    "align": "right",
+                    "text_color": "#ac8ad6",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "3c615b6d",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "width": {
+                  "unit": "%",
+                  "size": 25,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "align_items": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "274e188e",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "آکادمی اثر",
+                    "header_size": "h4",
+                    "align": "right",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "title_color": "#ffffff"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "d0e83bda",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "<a href=\"/academy/\" style=\"color:#d0d0d2;\">دوره‌های آموزشی</a><br><a href=\"/blog/\" style=\"color:#d0d0d2;\">مقالات آموزشی</a>",
+                    "align": "right",
+                    "text_color": "#3d4350",
+                    "typography_typography": "custom",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.8,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "e82caf88",
+          "elType": "widget",
+          "widgetType": "spacer",
+          "isInner": false,
+          "settings": {
+            "space": {
+              "unit": "px",
+              "size": 20,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "baae8989",
+          "elType": "widget",
+          "widgetType": "divider",
+          "isInner": false,
+          "settings": {
+            "color": "#430096",
+            "weight": {
+              "unit": "px",
+              "size": 1,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "071aafe5",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "<div dir=\"rtl\" style=\"text-align:center;color:#fff;\">تمام حقوق برای استودیو اثر محفوظ می‌باشد. | Effect Studio 2025</div>",
+            "align": "center",
+            "text_color": "#ffffff",
+            "typography_typography": "custom",
+            "typography_font_size": {
+              "unit": "px",
+              "size": 13,
+              "sizes": []
+            },
+            "typography_font_weight": "400",
+            "typography_line_height": {
+              "unit": "em",
+              "size": 1.8,
+              "sizes": []
+            }
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}
