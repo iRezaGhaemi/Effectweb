@@ -1,0 +1,19 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  i18n: {
+    // بدون i18n؛ فقط فارسی
+    locales: ['fa'],
+    defaultLocale: 'fa',
+  },
+  images: {
+    // تصاویر از وردپرس (دامنه متغیر) — برای سادگی، loader پیش‌فرض
+    remotePatterns: [
+      { protocol: 'https', hostname: '**' },
+      { protocol: 'http', hostname: '**' },
+    ],
+    unoptimized: true,
+  },
+};
+
+module.exports = nextConfig;
