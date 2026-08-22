@@ -1,7 +1,4 @@
-/* ============================================================
-   استودیو اثر — فرانت‌اند headless (راست‌چین)
-   ============================================================ */
-
+/* فونت محلی وزیرمتن */
 @font-face {
   font-family: 'Vazirmatn';
   src: url('/fonts/Vazirmatn-Variable.woff2') format('woff2-variations');
@@ -21,185 +18,35 @@
   font-display: swap;
 }
 
+/*
+ * بازنویسی متغیرهای برند برای استفاده از فونت وزیرمتن و راست‌چین.
+ * بقیه‌ی استایل‌ها (رنگ‌ها، فاصله‌ها، افکت‌ها) از tailwind.css واقعی
+ * (استخراج‌شده از فایل HTML اصلی) می‌آیند تا طراحی ۱۰۰٪ مطابق باشد.
+ */
 :root {
-  --royal: #4a00a5;
-  --royal-2: #5e01a4;
-  --violet: #6e33b7;
-  --lilac: #ac8ad6;
-  --why: #2d0065;
-  --amber: #ffaa00;
-  --amber-dark: #e89b00;
-  --ink: #16161d;
-  --body: #3d4350;
-  --muted: #a3a9b6;
-  --line: #e0e2e7;
-  --mist: #f5f5f5;
-  --panel: #fafafa;
+  --font-sans: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-html, body { overflow-x: hidden; }
-body {
-  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+html {
   direction: rtl;
-  text-align: right;
-  color: var(--body);
-  background: #fff;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; text-decoration: none; }
-ul { list-style: none; }
-img { max-width: 100%; height: auto; display: block; }
-
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin-inline: auto;
-  padding-inline: 20px;
 }
 
-/* ---------- هدر ---------- */
-.site-header {
-  background: var(--why);
-  padding: 16px 20px;
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  max-width: 1280px;
-  margin-inline: auto;
-}
-.brand { font-weight: 800; font-size: 20px; color: #fff; }
-.brand span { color: var(--amber); }
-.nav { display: flex; gap: 22px; flex: 1; justify-content: center; }
-.nav a { color: #fafafa; font-size: 15px; transition: color .15s; }
-.nav a:hover { color: #fff; }
-.nav a.active { color: var(--amber); }
-.phone { color: var(--amber); font-weight: 700; direction: ltr; white-space: nowrap; }
-
-/* ---------- فوتر ---------- */
-.site-footer { background: var(--why); color: #fff; padding: 40px 20px 24px; }
-.footer-cols {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  max-width: 1280px;
-  margin-inline: auto;
-}
-.footer-cols h4 { color: #fff; font-size: 16px; margin-bottom: 14px; }
-.footer-cols a, .footer-cols p { color: #d0d0d2; font-size: 14px; line-height: 2.1; }
-.footer-cols a:hover { color: #fff; }
-.footer-bottom {
-  max-width: 1280px;
-  margin: 32px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid #430096;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 14px;
-}
-.footer-bottom .amber { color: var(--amber); font-weight: 600; }
-
-/* ---------- بخش‌ها ---------- */
-.hero {
-  background: var(--why);
-  padding: 70px 20px;
-  text-align: center;
-}
-.hero h1 { color: #fff; font-size: 40px; font-weight: 800; margin-bottom: 14px; }
-.hero p { color: var(--lilac); font-size: 17px; max-width: 640px; margin: 0 auto 24px; }
-.hero .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  height: 48px;
-  padding: 0 22px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  transition: filter .15s;
-}
-.btn:hover { filter: brightness(1.05); }
-.btn-amber { background: var(--amber); color: var(--ink); }
-.btn-royal { background: var(--royal); color: #fff; }
-
-.section { padding: 60px 20px; }
-.section-alt { background: var(--mist); }
-.section h2 { color: var(--ink); font-size: 32px; margin-bottom: 20px; text-align: center; }
-.section .lead { color: var(--body); text-align: center; max-width: 720px; margin: 0 auto; }
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1280px;
-  margin: 30px auto 0;
-}
-.service-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 24px;
-  text-align: center;
-  font-weight: 700;
-  color: var(--ink);
+body {
+  font-family: var(--font-sans) !important;
 }
 
-/* ---------- بلاگ و محصولات ---------- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1280px;
-  margin: 30px auto 0;
-}
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
-  transition: box-shadow .2s;
-}
-.card:hover { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
-.card h3 { color: var(--ink); font-size: 17px; margin-bottom: 8px; }
-.card p { color: var(--body); font-size: 14px; }
-.card .price { color: var(--royal); font-weight: 700; margin-top: 8px; }
-.card .meta { color: var(--muted); font-size: 12px; margin-top: 8px; }
-
-/* ---------- متن مقاله ---------- */
-.prose { max-width: 800px; margin: 40px auto; color: var(--body); font-size: 16px; line-height: 2; }
-.prose h2, .prose h3 { color: var(--ink); margin: 24px 0 12px; }
-
-/* ---------- وضعیت اتصال ---------- */
+/* نشانگر وضعیت اتصال به وردپرس */
 .conn-badge {
   position: fixed;
   bottom: 12px;
   inset-inline-start: 12px;
-  background: var(--panel);
-  border: 1px solid var(--line);
+  background: var(--color-panel, #fafafa);
+  border: 1px solid var(--color-line, #e0e2e7);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 12px;
-  color: var(--muted);
+  color: var(--color-muted, #a3a9b6);
   z-index: 50;
+  font-family: var(--font-sans);
 }
 .conn-badge.ok { color: #1a7f37; border-color: #1a7f37; }
-
-/* ---------- واکنش‌گرا ---------- */
-@media (max-width: 900px) {
-  .nav { display: none; }
-  .footer-cols { grid-template-columns: repeat(2, 1fr); }
-  .services-grid, .cards { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 560px) {
-  .services-grid, .cards { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 28px; }
-}
