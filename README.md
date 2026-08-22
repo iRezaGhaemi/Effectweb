@@ -81,7 +81,16 @@ NEXT_PUBLIC_WP_URL=https://your-domain.com
 
 > بدون وردپرس هم کار می‌کند (از محتوای fallback استفاده می‌کند) — برای پیش‌نمایش.
 
-**استقرار:** روی Vercel، Netlify یا هر سرور Node (`npm run build && npm start`).
+**استقرار (۳ روش):**
+```bash
+# ۱) Docker (توصیه‌شده)
+docker compose up -d --build
+
+# ۲) سرور Node
+npm run build && npm run start
+
+# ۳) Vercel / Netlify — import مستقیم مخزن
+```
 
 ---
 

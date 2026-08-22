@@ -88,5 +88,29 @@ npm run start
 
 ## 📦 استقرار
 
-این پروژه را می‌توانید روی هر پلتفرمی که Next.js را پشتیبانی می‌کند deploy کنید:
-Vercel، Netlify، یا یک سرور Node (با `npm run build && npm start`).
+### روش ۱ — Docker (توصیه‌شده)
+
+یک `Dockerfile` چندمرحله‌ای و `docker-compose.yml` آماده است:
+
+```bash
+# با docker-compose
+docker compose up -d --build
+
+# یا دستی
+docker build -t effect-studio-headless .
+docker run -p 3000:3000 --env-file .env effect-studio-headless
+```
+
+آدرس وردپرس را قبل از build در فایل `.env` (یا `--build-arg NEXT_PUBLIC_WP_URL=...`) تنظیم کنید.
+
+> خروجی `standalone` در `next.config.js` فعال است، بنابراین ایمیج نهایی سبک و سریع است.
+
+### روش ۲ — Vercel / Netlify
+
+این پروژه را مستقیم از مخزن import کنید (پلتفرم‌ها Next.js را خودکار تشخیص می‌دهند).
+
+### روش ۳ — سرور Node
+
+```bash
+npm run build && npm run start
+```

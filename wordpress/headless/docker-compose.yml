@@ -1,0 +1,24 @@
+# ============================================================
+# Effect Studio — Headless (docker-compose)
+#
+# اجرا:
+#   docker compose up -d --build
+#
+# نکته: آدرس وردپرس را در .env (همین پوشه) یا environment زیر تنظیم کنید.
+# ============================================================
+
+version: '3.8'
+
+services:
+  headless:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_WP_URL: ${NEXT_PUBLIC_WP_URL:-}
+        NEXT_PUBLIC_WC_CONSUMER_KEY: ${NEXT_PUBLIC_WC_CONSUMER_KEY:-}
+        NEXT_PUBLIC_WC_CONSUMER_SECRET: ${NEXT_PUBLIC_WC_CONSUMER_SECRET:-}
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXT_PUBLIC_WP_URL=${NEXT_PUBLIC_WP_URL:-}
+    restart: unless-stopped

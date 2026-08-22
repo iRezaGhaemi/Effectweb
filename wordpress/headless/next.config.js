@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // خروجی standalone برای استقرار سبک در Docker/سرور
+  output: 'standalone',
   i18n: {
     // بدون i18n؛ فقط فارسی
     locales: ['fa'],
